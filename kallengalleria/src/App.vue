@@ -1,5 +1,6 @@
 <template>
-<v-app>
+<v-app dark>
+  <!-- <img src="@/assets/bg-image.jpg" class="md-5" style="height:100%;"> -->
   <!-- <v-navigation-drawer persistent :mini-variant="miniVariant" :clipped="clipped" v-model="drawer" enable-resize-watcher fixed app>
     <v-list>
       <v-list-tile value="true" v-for="(item, i) in items" :key="i">
@@ -14,25 +15,33 @@
   </v-navigation-drawer> -->
 
   <!-- start: navbar -->
-  <v-toolbar app :clipped-left="clipped" :dark="true">
+  <v-toolbar app :clipped-left="clipped">
     <v-toolbar-title v-text="title"></v-toolbar-title>
-    <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+    <!-- <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
     <v-btn icon @click.stop="miniVariant = !miniVariant">
       <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-    </v-btn>
-    <v-btn icon @click.stop="clipped = !clipped">
+    </v-btn> -->
+    <!-- <v-btn icon @click.stop="clipped = !clipped">
       <v-icon>web</v-icon>
-    </v-btn>
-    <v-btn icon @click.stop="fixed = !fixed">
+    </v-btn> -->
+    <!-- <v-btn icon @click.stop="fixed = !fixed">
       <v-icon>remove</v-icon>
-    </v-btn>
+    </v-btn> -->
     <v-spacer></v-spacer>
+    <v-toolbar-items class="hidden-sm-and-down">
+   <v-btn flat>Biography</v-btn>
+   <v-btn flat>Gallery</v-btn>
+   <v-btn flat>Contact</v-btn>
+ </v-toolbar-items>
   </v-toolbar>
   <!-- end: navbar -->
 
   <!-- start: content -->
   <v-content>
+    <div class="bg">
+    <!-- <v-parallax src="@/assets/bg-image.jpg" height="100%"></v-parallax> -->
     <router-view/>
+    </div>
   </v-content>
   <!-- end: content -->
 
@@ -50,13 +59,46 @@
   <!-- end: right side navbar -->
 
   <!-- start: footer -->
-  <v-footer :fixed="fixed" :dark="true" app>
+  <!-- <v-footer :fixed="fixed" app>
     <span>&copy; 2018</span>
-  </v-footer>
+  </v-footer> -->
   <!-- end: footer -->
 
 </v-app>
 </template>
+
+<style>
+
+/* #app {
+  font-family: 'Caveat Brush', cursive;
+} */
+
+/* h1 {
+  font-family: 'Caveat Brush', cursive;
+  font-size: 50pt ;
+} */
+
+.btn--flat {
+  font-family: 'Caveat Brush', cursive;
+  font-size:24pt;
+}
+
+.toolbar__title {
+  font-family: 'Caveat Brush', cursive;
+  font-size:30pt;
+}
+
+/* font-family: 'Caveat Brush', cursive; */
+
+.bg {
+  background: url(./assets/bg-image.jpg) no-repeat center center;
+  height: 100%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+</style>
 
 <script>
 export default {
