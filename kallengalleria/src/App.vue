@@ -38,10 +38,7 @@
 
   <!-- start: content -->
   <v-content>
-    <div class="bg">
-    <!-- <v-parallax src="@/assets/bg-image.jpg" height="100%"></v-parallax> -->
     <router-view/>
-    </div>
   </v-content>
   <!-- end: content -->
 
@@ -69,6 +66,17 @@
 
 <style>
 
+.content {
+  background-image: url(/static/img/bg-image.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
 /* #app {
   font-family: 'Caveat Brush', cursive;
 } */
@@ -79,25 +87,17 @@
 } */
 
 .btn--flat {
-  font-family: 'Caveat Brush', cursive;
+  font-family: 'EB Garamond', serif;
   font-size:24pt;
 }
 
 .toolbar__title {
-  font-family: 'Caveat Brush', cursive;
+  font-family: 'EB Garamond', serif;
   font-size:30pt;
 }
 
 /* font-family: 'Caveat Brush', cursive; */
 
-.bg {
-  background: url(./assets/bg-image.jpg) no-repeat center center;
-  height: 100%;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-}
 </style>
 
 <script>
