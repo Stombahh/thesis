@@ -75,6 +75,7 @@
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  font-family: 'EB Garamond', serif;
 }
 
 /* #app {
@@ -88,15 +89,13 @@
 
 .btn--flat {
   font-family: 'EB Garamond', serif;
-  font-size:24pt;
+  font-size:18pt;
 }
 
 .toolbar__title {
   font-family: 'EB Garamond', serif;
-  font-size:30pt;
+  font-size:24pt;
 }
-
-/* font-family: 'Caveat Brush', cursive; */
 
 </style>
 
