@@ -2,19 +2,20 @@
 <v-container>
   <v-layout class="layout-container">
     <div class="background">
-      <h1>About the artist</h1>
+      <h1>Kalle Pitkänen</h1>
       <h2><i>Oil and tempera artist</i></h2>
     </div>
   </v-layout>
-  <v-layout column class="layout-container">
+
+  <v-layout class="layout-container">
     <div class="background">
       <v-layout>
         <v-flex md12>
           <h2>About the artist</h2>
         </v-flex>
       </v-layout>
-      <v-layout>
-        <v-flex md8>
+      <v-layout row wrap>
+        <v-flex md12 lg7>
           <p>
             Born 1994 in Helsinki Finland, Kalle Pitkänen uses oil paints and tempera to create dark and surreal pictures inspired by dreams, soul-searching and death. With appreciation towards the craftsmanship and the technical know-how of the old masters like
             Rembrandt, Tizian and Rubens, Pitkänen seeks to paint atmospheric scenes that takes the viewer to another world beneath the surface of dreaming.
@@ -23,10 +24,15 @@
             <i>My work tends to have a melancholic appearance or ”spirit” and this is something I aim for. There is something fascinating in the unknown. Everyone at times wonder what might come after death and what waits us beyond the limits of our knowledge. After all this is only natural and in a way, I'm doing the same thing through my art.</i>
           </p>
         </v-flex>
-        <v-flex md4>testi</v-flex>
+        <v-flex md12 lg5 justify-center>
+          <div class="profile-image">
+            <img src="/static/img/profile.jpg">
+          </div>
+        </v-flex>
       </v-layout>
     </div>
   </v-layout>
+
   <v-layout column class="layout-container">
     <div class="background">
       <v-layout>
@@ -41,23 +47,25 @@
       </v-layout>
     </div>
   </v-layout>
-  <v-layout column class="layout-container">
+
+  <v-layout class="layout-container">
     <div class="background">
       <v-layout>
-        <v-flex md12>
+        <v-flex>
           <h2>Contact</h2>
         </v-flex>
       </v-layout>
-      <v-layout>
-        <v-flex md12>
-          <p>yhteystietoja</p>
+      <v-layout row wrap>
+      <v-flex md6 xs12 class="contact-leftside">
+        <v-flex>
+          <p style="padding-right:10px;">Please take contact if you want to order painting or ask something</p>
+          <v-flex><v-icon style="width:20px; margin-bottom:5px;">fas fa-map-marker-alt</v-icon><span>Helsinki, Finland</span></v-flex>
+          <v-flex><v-icon style="width:20px; margin-bottom:5px;">fas fa-mobile-alt</v-icon><span>+358 50 4678 732</span></v-flex>
+          <v-flex><v-icon style="width:20px; margin-bottom:5px;">fas fa-envelope</v-icon><span>kalle.pitkanen@hotmail.com</span></v-flex>
         </v-flex>
-      </v-layout>
-      <v-layout md12>
-          <v-form md12 v-model="valid" ref="form" lazy-validation style="width:100%;">
-            <v-layout md12>
-              <v-layout md6>
-                <v-flex >
+      </v-flex>
+      <v-flex md6 xs12 class="contact-rightside">
+          <v-form v-model="valid" ref="form" lazy-validation style="width:100%;">
                   <v-text-field class="contact-field"
                     label="Name"
                     v-model="name"
@@ -79,10 +87,6 @@
                     prepend-icon="email"
 
                   ></v-text-field>
-                </v-flex>
-              </v-layout>
-              <v-layout md6>
-                <v-flex>
                   <v-text-field
                     label="Message"
                     v-model="message"
@@ -95,17 +99,16 @@
                     color
 
                   ></v-text-field>
-                </v-flex>
-              </v-layout>
-            </v-layout>
             <v-btn @click="submit" :disabled="!valid">Send</v-btn>
             <v-btn @click="clear">clear</v-btn>
           </v-form>
-        </v-layout>
+        </v-flex>
+      </v-layout>
     </div>
   </v-layout>
-  <v-layout column class="dooter">
-    <div class="background">
+
+  <v-layout column class="the-footer">
+    <div class="the-footer-background">
       <v-layout>
         <v-flex md12>
           <h2>Footer</h2>
@@ -124,14 +127,35 @@
 @media only screen and (max-width: 600px) {
   .layout-container {
     margin-top: 20vh !important;
+    width: 95% !important;
+  }
+  .profile-image {
+    margin:0 !important;
+  }
+
+  p {
+    font-size: 1.4em!important;
   }
 }
 
+@media only screen and (min-width: 1900px) {
+  .layout-container {
+    /* margin-top: 20vh !important; */
+    width: 55% !important;
+  }
+
+  .the-footer {
+    width: 55% !important;
+  }
+
+}
+
 .container {
-  /* padding: 0; */
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 3840px;
 }
 
 .layout-container {
@@ -141,6 +165,33 @@
   margin-top: 32vh;
   margin-bottom: 12vh;
   width: 70%;
+  /* background: grey */
+}
+
+.profile-image {
+  display: flex;
+  justify-content: center;
+  margin-left:30px;
+}
+
+.profile-image img {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 5px;
+}
+
+.contact-leftside {
+  width: 100%;
+  margin-bottom: 20px;
+  /* padding-right: 10px; */
+}
+
+.contact-rightside {
+  width: 100%;
+}
+
+textarea {
+  color: black;
 }
 
 /* .testi {
@@ -162,7 +213,7 @@
 } */
 
 .input-group {
-  width: 400px;
+  /* width: 400px; */
   /* padding: 0; */
 }
 .input-group.input-group--solo {
@@ -175,21 +226,34 @@ input .input-group--text-field input {
 }
 
 .background {
-  background: rgba(33, 33, 33, 0.70);
-  border-radius: 10px;
+  background: rgba(33, 33, 33, 0.90);
+  border-radius: 5px;
   padding: 2rem;
+  /* width: 100%; */
 }
 
 .content-padding {
   padding-top: 10px;
 }
 
-.dooter {
+.the-footer {
   width: 70%;
 }
 
-p {
+.the-footer-background {
+  border-radius: 5px 0 0 5px;
+  background: rgba(33, 33, 33, 0.70);
+  padding: 1rem 0 1rem 2rem;
+}
+
+span {
   font-size: 1.4em;
+  margin-left: 10px;
+}
+
+p {
+  /* font-size: 1.4em; */
+  font-size: 2.3vh;
 }
 
 h1 {
