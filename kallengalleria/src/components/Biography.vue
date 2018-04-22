@@ -32,7 +32,6 @@
 <style scoped>
 /* Extra small devices (phones, 600px and down) */
 
-
 .profile-image {
   display: flex;
   justify-content: center;
@@ -43,6 +42,10 @@
   max-width: 100%;
   max-height: 400px;
   border-radius: 5px;
+}
+
+.background {
+  width: 90%;
 }
 
 </style>

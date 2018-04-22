@@ -16,8 +16,11 @@ import {
   VToolbar,
   transitions,
 } from 'vuetify';
+import VuePictureSwipe from 'vue-picture-swipe';
+
 import App from './App';
 import router from './router';
+
 
 import '../node_modules/vuetify/src/stylus/app.styl';
 
@@ -46,6 +49,9 @@ Vue.use(Vuetify, {
     warning: '#FFC107',
   },
 });
+
+Vue.component('vue-picture-swipe', VuePictureSwipe);
+// export default VuePictureSwipe;
 
 Vue.config.productionTip = false;
 

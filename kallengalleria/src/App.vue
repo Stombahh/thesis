@@ -3,9 +3,7 @@
 
   <!-- start: navbar -->
   <v-toolbar app :clipped-left="clipped">
-    <v-toolbar-title>
-      <v-btn :to="{ name: 'mainpage'}" v-text="title"></v-btn>
-    </v-toolbar-title>
+    <v-btn :to="{ name: 'mainpage'}" flat v-text="title" class="toolbar__title"></v-btn>
     <!-- <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
     <v-btn icon @click.stop="miniVariant = !miniVariant">
       <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
@@ -35,9 +33,10 @@
   <!-- end: content -->
 
   <!-- start: footer -->
-  <v-footer :fixed="fixed" app>
-    <span>&copy; 2018</span>
-  </v-footer>
+  <v-footer class="pa-3" :fixed="fixed" app>
+   <v-spacer></v-spacer>
+   <div>&copy; {{ new Date().getFullYear() }}</div>
+ </v-footer>
   <!-- end: footer -->
 
 </v-app>
@@ -128,6 +127,9 @@ html {
 .toolbar__title {
   font-family: 'EB Garamond', serif;
   font-size:24pt;
+  text-transform: none;
+  margin-left: 20px!important;
+  /* text-rendering:  */
 }
 
 span {
