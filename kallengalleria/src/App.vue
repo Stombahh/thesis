@@ -3,7 +3,9 @@
 
   <!-- start: navbar -->
   <v-toolbar app :clipped-left="clipped">
-    <v-toolbar-title v-text="title"></v-toolbar-title>
+    <v-toolbar-title>
+      <v-btn :to="{ name: 'mainpage'}" v-text="title"></v-btn>
+    </v-toolbar-title>
     <!-- <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
     <v-btn icon @click.stop="miniVariant = !miniVariant">
       <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
@@ -16,29 +18,36 @@
     </v-btn> -->
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
-   <v-btn flat>Biography</v-btn>
-   <v-btn flat>Gallery</v-btn>
-   <v-btn flat>Contact</v-btn>
+   <v-btn :to="{ name: 'biography'}" flat>Biography</v-btn>
+   <v-btn :to="{ name: 'gallery'}" flat>Gallery</v-btn>
+   <v-btn :to="{ name: 'contact'}" flat>Contact</v-btn>
  </v-toolbar-items>
   </v-toolbar>
   <!-- end: navbar -->
 
+
   <!-- start: content -->
   <v-content>
+    <v-slide-y-transition>
     <router-view/>
+  </v-slide-y-transition>
   </v-content>
   <!-- end: content -->
 
   <!-- start: footer -->
-  <!-- <v-footer :fixed="fixed" app>
+  <v-footer :fixed="fixed" app>
     <span>&copy; 2018</span>
-  </v-footer> -->
+  </v-footer>
   <!-- end: footer -->
 
 </v-app>
 </template>
 
 <style>
+
+html {
+  overflow-y: auto;
+}
 
 .content {
   background-image: url(/static/img/bg-image.jpg);
@@ -52,14 +61,64 @@
   font-family: 'EB Garamond', serif;
 }
 
-/* #app {
-  font-family: 'Caveat Brush', cursive;
-} */
+@media only screen and (max-width: 600px) {
+  .layout-container {
+    /* margin-top: 20vh !important; */
+    width: 95% !important;
+  }
 
-/* h1 {
-  font-family: 'Caveat Brush', cursive;
-  font-size: 50pt ;
-} */
+  .background {
+    padding: 1em!important;
+  }
+  .profile-image {
+    margin:0 !important;
+  }
+
+  p {
+    font-size: 1.4em!important;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .layout-container {
+    /* margin-top: 20vh !important; */
+    width: 55% !important;
+  }
+
+  .the-footer {
+    width: 55% !important;
+  }
+
+}
+
+.container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 3840px;
+}
+
+.layout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 32vh;
+  margin-bottom: 12vh; */
+  width: 70%;
+  /* background: grey */
+}
+
+.background {
+  background: rgba(33, 33, 33, 0.90);
+  border-radius: 5px;
+  padding: 2rem;
+  margin: 10px 0 10px 0;
+}
+
+.content-padding {
+  padding-top: 10px;
+}
 
 .btn--flat {
   font-family: 'EB Garamond', serif;
@@ -69,6 +128,32 @@
 .toolbar__title {
   font-family: 'EB Garamond', serif;
   font-size:24pt;
+}
+
+span {
+  font-size: 1.4em;
+  margin-left: 10px;
+}
+
+p {
+  /* font-size: 1.4em; */
+  font-size: 2.3vh;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 8vh;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 5vh;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 1.6em;
 }
 
 </style>
