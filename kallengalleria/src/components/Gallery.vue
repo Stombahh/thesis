@@ -7,9 +7,9 @@
           <h2>Gallery</h2>
         </v-flex>
       </v-layout>
-      <v-layout row wrap>
+      <v-layout>
         <v-flex md12>
-          <vue-picture-swipe :items="items" :shareEl="false"></vue-picture-swipe>
+          <vue-picture-swipe :items="items"></vue-picture-swipe>
         </v-flex>
       </v-layout>
     </div>
@@ -20,18 +20,35 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style>
- .my-gallery img {
-  width:20%;
-  height: 20%;
+
+@media only screen and (max-width: 600px) {
+  .my-gallery img {
+    width:96%!important;
+    height:96%!important;
+  }
+  .my-gallery {
+    padding:10px 0 0 0!important;
+  }
 }
 
+.my-gallery {
+  padding:10px 0 0 35px;
+}
+ .my-gallery img {
+   height: 350px;
+   margin-top:2px;
+   border: 1px solid rgb(60, 60, 60);
+}
+
+
 .my-gallery img:hover {
-  opacity: 0.4;
-  background-color: black;
+  filter: brightness(60%);
+
 }
 
 .my-gallery a {
   color: #fff;
+
 }
 
 </style>

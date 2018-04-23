@@ -1,34 +1,48 @@
 <template>
 <v-app dark>
-
+  <v-navigation-drawer
+      clipped
+      fixed
+      width="220"
+      v-model="drawer"
+      app
+    >
+    <v-list dense>
+      <v-list-tile @click="">
+        <v-list-tile-content>
+          <v-btn :to="{ name: 'biography'}" flat>Biography</v-btn>
+        </v-list-tile-content>
+      </v-list-tile>
+      <v-list-tile @click="">
+        <v-list-tile-content>
+          <v-btn :to="{ name: 'gallery'}" flat>Gallery</v-btn>
+        </v-list-tile-content>
+      </v-list-tile>
+      <v-list-tile @click="">
+        <v-list-tile-content>
+          <v-btn :to="{ name: 'contact'}" flat>Contact</v-btn>
+        </v-list-tile-content>
+      </v-list-tile>
+    </v-list>
+  </v-navigation-drawer>
   <!-- start: navbar -->
   <v-toolbar app :clipped-left="clipped">
+
     <v-btn :to="{ name: 'mainpage'}" flat v-text="title" class="toolbar__title"></v-btn>
-    <!-- <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-    <v-btn icon @click.stop="miniVariant = !miniVariant">
-      <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-    </v-btn> -->
-    <!-- <v-btn icon @click.stop="clipped = !clipped">
-      <v-icon>web</v-icon>
-    </v-btn> -->
-    <!-- <v-btn icon @click.stop="fixed = !fixed">
-      <v-icon>remove</v-icon>
-    </v-btn> -->
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
    <v-btn :to="{ name: 'biography'}" flat>Biography</v-btn>
    <v-btn :to="{ name: 'gallery'}" flat>Gallery</v-btn>
    <v-btn :to="{ name: 'contact'}" flat>Contact</v-btn>
  </v-toolbar-items>
+ <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
   </v-toolbar>
   <!-- end: navbar -->
 
 
   <!-- start: content -->
   <v-content>
-    <v-slide-y-transition>
     <router-view/>
-  </v-slide-y-transition>
   </v-content>
   <!-- end: content -->
 
@@ -164,16 +178,7 @@ h3 {
 export default {
   data() {
     return {
-      clipped: false,
-      drawer: true,
-      fixed: false,
-      items: [{
-        icon: 'bubble_chart',
-        title: 'Inspire',
-      }],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
+      drawer: false,
       title: 'Kalle Pitkänen',
     };
   },
