@@ -7,7 +7,7 @@
     </div>
   </v-layout>
 
-  <v-icon x-large>fas fa-chevron-down</v-icon>
+  <!-- <v-icon x-large>fas fa-chevron-down</v-icon> -->
 
 </v-container>
 </template>

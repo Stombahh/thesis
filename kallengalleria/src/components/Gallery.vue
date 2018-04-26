@@ -31,6 +31,10 @@
   }
 }
 
+.background {
+  /* width: 90%; */
+}
+
 .my-gallery {
   padding:10px 0 0 35px;
 }

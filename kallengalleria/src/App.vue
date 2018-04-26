@@ -47,9 +47,12 @@
   <!-- end: content -->
 
   <!-- start: footer -->
-  <v-footer class="pa-3" :fixed="fixed" app>
+  <!-- <v-footer class="pa-3" :fixed="fixed" app>
+    <v-spacer></v-spacer>
+    <v-icon large>fab fa-instagram</v-icon>
+    <v-icon large >fab fa-facebook-square</v-icon>
    <v-spacer></v-spacer>
-   <div>&copy; {{ new Date().getFullYear() }}</div>
+   <div>&copy; {{ new Date().getFullYear() }}</div> -->
  </v-footer>
   <!-- end: footer -->
 
@@ -94,14 +97,8 @@ html {
 
 @media only screen and (min-width: 1900px) {
   .layout-container {
-    /* margin-top: 20vh !important; */
     width: 55% !important;
   }
-
-  .the-footer {
-    width: 55% !important;
-  }
-
 }
 
 .container {
@@ -116,10 +113,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-top: 32vh;
-  margin-bottom: 12vh; */
   width: 70%;
-  /* background: grey */
 }
 
 .background {
