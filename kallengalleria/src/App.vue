@@ -3,31 +3,32 @@
   <v-navigation-drawer
       clipped
       fixed
-      width="220"
+      width="190"
       v-model="drawer"
       app
+      temporary="true"
     >
     <v-list dense>
       <v-list-tile @click="">
         <v-list-tile-content>
-          <v-btn :to="{ name: 'biography'}" flat>Biography</v-btn>
+          <v-btn :to="{ name: 'biography'}" flat right>Biography</v-btn>
         </v-list-tile-content>
       </v-list-tile>
       <v-list-tile @click="">
         <v-list-tile-content>
-          <v-btn :to="{ name: 'gallery'}" flat>Gallery</v-btn>
+          <v-btn :to="{ name: 'gallery'}" flat right>Gallery</v-btn>
         </v-list-tile-content>
       </v-list-tile>
       <v-list-tile @click="">
         <v-list-tile-content>
-          <v-btn :to="{ name: 'contact'}" flat>Contact</v-btn>
+          <v-btn :to="{ name: 'contact'}" flat right>Contact</v-btn>
         </v-list-tile-content>
       </v-list-tile>
     </v-list>
   </v-navigation-drawer>
+
   <!-- start: navbar -->
   <v-toolbar app :clipped-left="clipped">
-
     <v-btn :to="{ name: 'mainpage'}" flat v-text="title" class="toolbar__title"></v-btn>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
@@ -45,16 +46,6 @@
     <router-view/>
   </v-content>
   <!-- end: content -->
-
-  <!-- start: footer -->
-  <!-- <v-footer class="pa-3" :fixed="fixed" app>
-    <v-spacer></v-spacer>
-    <v-icon large>fab fa-instagram</v-icon>
-    <v-icon large >fab fa-facebook-square</v-icon>
-   <v-spacer></v-spacer>
-   <div>&copy; {{ new Date().getFullYear() }}</div> -->
- </v-footer>
-  <!-- end: footer -->
 
 </v-app>
 </template>

@@ -150,7 +150,6 @@ input .input-group--text-field input {
 import axios from 'axios';
 
 export default {
-  name: 'gallery',
 
   data: () => ({
     valid: true,

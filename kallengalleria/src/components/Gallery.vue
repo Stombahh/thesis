@@ -57,15 +57,11 @@
 
 </style>
 
-
 <script>
 
 export default {
   data() {
     return {
-      // shareButtons: [
-      //   { id: 'download', download: false },
-      // ],
       items: [{
         src: 'static/img/deep-slumber.jpg',
         thumbnail: 'static/img/deep-slumber.jpg',
