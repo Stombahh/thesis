@@ -120,12 +120,12 @@ html {
 
 .btn--flat {
   font-family: 'EB Garamond', serif;
-  font-size:18pt;
+  font-size:18pt!important;
 }
 
 .toolbar__title {
   font-family: 'EB Garamond', serif;
-  font-size:24pt;
+  /* font-size:24pt!important; */
   text-transform: none;
   margin-left: 20px!important;
   /* text-rendering:  */

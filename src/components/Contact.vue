@@ -39,17 +39,14 @@
                     prepend-icon="email"
 
                   ></v-text-field>
-                  <v-text-field
+                  <v-text-field class="contact-field"
                     label="Message"
                     v-model="message"
                     :rules="messageRules"
                     multi-line
                     rows="3"
-                    row-height="16"
                     required
                     solo-inverted
-                    color
-
                   ></v-text-field>
             <v-btn @click="submit" :disabled="!valid">Send</v-btn>
             <v-btn @click="clear">clear</v-btn>
@@ -59,23 +56,11 @@
     </div>
   </v-layout>
 
-  <!-- <v-layout class="layout-container" style="">
-    <div class="background" style="position:fixed;">
-      <v-layout>
-        <v-flex md12>
-          <h2>Footer</h2>
-        </v-flex>
-      </v-layout>
-    </div>
-  </v-layout> -->
-
     <v-footer height="60" class="pa-3">
-        <!-- <v-spacer></v-spacer> -->
         <v-btn href="https://www.instagram.com/infernumart/" flat icon><v-icon large>fab fa-instagram</v-icon></v-btn>
         <v-btn href="https://www.facebook.com/kalle.pitkanen" flat icon><v-icon large>fab fa-facebook-square</v-icon></v-btn>
         <v-spacer></v-spacer>
         <div style="padding-right:15px;">&copy; {{ new Date().getFullYear() }} Kalle Pitkänen</div>
-        <!-- <v-spacer></v-spacer> -->
     </v-footer>
 </v-container>
 </template>
@@ -97,46 +82,20 @@
 
 .background {
   width: 100%;
-  /* margin: 20px; */
 }
 
 .contact-leftside {
   width: 100%;
   margin-bottom: 20px;
-  /* padding-right: 10px; */
 }
 
 .contact-rightside {
   width: 100%;
 }
 
-textarea {
-  color: black;
-}
-
-.primary--text {
-  color: #fff !important;
-  /* font-weight: bold; */
-  /* font-size: 20px; */
-}
-
-/* .input-group__details ::before {
-  min-height: 0px !important;
-  height: 0 !important;
-  padding-top: 0px !important;
-} */
-
-.input-group {
-  /* width: 400px; */
-  /* padding: 0; */
-}
 .input-group.input-group--solo {
   margin-bottom:10px;
   margin-right: 10px;
-}
-
-input .input-group--text-field input {
-  height: 50px !important;
 }
 
 .footer {
