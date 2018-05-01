@@ -7,8 +7,8 @@
           <h2>Gallery</h2>
         </v-flex>
       </v-layout>
-      <v-layout>
-        <v-flex md12>
+      <v-layout justify-center>
+        <v-flex md12 justify-center>
           <vue-picture-swipe :items="items"></vue-picture-swipe>
         </v-flex>
       </v-layout>
@@ -31,6 +31,10 @@
   }
 }
 
+figure {
+  display:inline!important;
+}
+
 .background {
   width: 100%;
 }
@@ -43,7 +47,6 @@
    margin-top:2px;
    border: 1px solid rgb(60, 60, 60);
 }
-
 
 .my-gallery img:hover {
   filter: brightness(60%);
@@ -65,6 +68,7 @@ export default {
       items: [{
         src: 'static/img/deep-slumber.jpg',
         thumbnail: 'static/img/deep-slumber.jpg',
+        contentUrl: 'testi',
         w: 2723,
         h: 3498,
       },
