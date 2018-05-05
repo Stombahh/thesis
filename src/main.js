@@ -51,7 +51,6 @@ Vue.use(Vuetify, {
 });
 
 Vue.component('vue-picture-swipe', VuePictureSwipe);
-// export default VuePictureSwipe;
 
 Vue.config.productionTip = false;
 

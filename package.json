@@ -21,9 +21,9 @@
     "photoswipe": "^4.1.2",
     "vue": "^2.5.2",
     "vue-fullpage.js": "0.0.1",
-    "vue-picture-swipe": "^0.1.7",
+    "vue-picture-swipe": "^0.2.3",
     "vue-router": "^3.0.1",
-    "vuetify": "^1.0.0"
+    "vuetify": "^1.0.17"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.5",

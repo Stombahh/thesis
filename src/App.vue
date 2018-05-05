@@ -57,7 +57,7 @@ html {
 }
 
 .content {
-  background-image: url(/static/img/bg-image.jpg);
+  background-image: url(/static/img/bg-image2.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;

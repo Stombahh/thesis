@@ -9,7 +9,48 @@
       </v-layout>
       <v-layout justify-center>
         <v-flex md12 justify-center>
-          <vue-picture-swipe :items="items"></vue-picture-swipe>
+          <vue-picture-swipe :items="[{
+            src: 'static/img/deep-slumber-compressed.jpg',
+            thumbnail: 'static/img/deep-slumber-compressed.jpg',
+            w: 2723,
+            h: 3498,
+            title: 'dsgdsg',
+          },
+          {
+            src: 'static/img/drowning-for-eternity-comp.jpg',
+            thumbnail: 'static/img/drowning-for-eternity-comp.jpg',
+            w: 2391,
+            h: 3403,
+          },
+          {
+            src: 'static/img/long-lost-comp.jpg',
+            thumbnail: 'static/img/long-lost-comp.jpg',
+            w: 1905,
+            h: 3676,
+          },
+          {
+            src: 'static/img/untitled-face-comp.jpg',
+            thumbnail: 'static/img/untitled-face-comp.jpg',
+            w: 2868,
+            h: 3285,
+          },
+          {
+            src: 'static/img/untitled-torso-comp.jpg',
+            thumbnail: 'static/img/untitled-torso-comp.jpg',
+            w: 2834,
+            h: 3497,
+          },
+          {
+            src: 'static/img/mask-comp.jpg',
+            thumbnail: 'static/img/mask-comp.jpg',
+            w: 2742,
+            h: 3844,
+          },
+          ]" :options="{shareButtons:[
+            {id:'facebook', label:'Share on Facebook', url:'https://www.facebook.com/sharer/sharer.php?u={{url}}'},
+            {id:'twitter', label:'Tweet', url:'https://twitter.com/intent/tweet?text={{text}}&url={{url}}'},
+            {id:'pinterest', label:'Pin it', url:'http://www.pinterest.com/pin/create/button/?url={{url}}&media={{image_url}}&description={{text}}'}]}">
+          </vue-picture-swipe>
         </v-flex>
       </v-layout>
     </div>
@@ -62,47 +103,46 @@ figure {
 
 <script>
 
-export default {
-  data() {
-    return {
-      items: [{
-        src: 'static/img/deep-slumber.jpg',
-        thumbnail: 'static/img/deep-slumber.jpg',
-        contentUrl: 'testi',
-        w: 2723,
-        h: 3498,
-      },
-      {
-        src: 'static/img/drowning-for-eternity.jpg',
-        thumbnail: 'static/img/drowning-for-eternity.jpg',
-        w: 2391,
-        h: 3403,
-      },
-      {
-        src: 'static/img/long-lost.jpg',
-        thumbnail: 'static/img/long-lost.jpg',
-        w: 1905,
-        h: 3676,
-      },
-      {
-        src: 'static/img/untitled-face.jpg',
-        thumbnail: 'static/img/untitled-face.jpg',
-        w: 2868,
-        h: 3285,
-      },
-      {
-        src: 'static/img/untitled-torso.jpg',
-        thumbnail: 'static/img/untitled-torso.jpg',
-        w: 2834,
-        h: 3497,
-      },
-      {
-        src: 'static/img/mask.jpg',
-        thumbnail: 'static/img/mask.jpg',
-        w: 2742,
-        h: 3844,
-      },
-      ] };
-  },
-};
+// export default {
+//   data() {
+//     return {
+//       items: [{
+//         src: 'static/img/deep-slumber-compressed.jpg',
+//         thumbnail: 'static/img/deep-slumber-compressed.jpg',
+//         w: 2723,
+//         h: 3498,
+//       },
+//       {
+//         src: 'static/img/drowning-for-eternity-comp.jpg',
+//         thumbnail: 'static/img/drowning-for-eternity-comp.jpg',
+//         w: 2391,
+//         h: 3403,
+//       },
+//       {
+//         src: 'static/img/long-lost-comp.jpg',
+//         thumbnail: 'static/img/long-lost-comp.jpg',
+//         w: 1905,
+//         h: 3676,
+//       },
+//       {
+//         src: 'static/img/untitled-face-comp.jpg',
+//         thumbnail: 'static/img/untitled-face-comp.jpg',
+//         w: 2868,
+//         h: 3285,
+//       },
+//       {
+//         src: 'static/img/untitled-torso-comp.jpg',
+//         thumbnail: 'static/img/untitled-torso-comp.jpg',
+//         w: 2834,
+//         h: 3497,
+//       },
+//       {
+//         src: 'static/img/mask-comp.jpg',
+//         thumbnail: 'static/img/mask-comp.jpg',
+//         w: 2742,
+//         h: 3844,
+//       },
+//       ] };
+//   },
+// };
 </script>
