@@ -35,16 +35,22 @@
             h: 3285,
           },
           {
-            src: 'static/img/untitled-torso-comp.jpg',
-            thumbnail: 'static/img/untitled-torso-comp.jpg',
-            w: 2834,
-            h: 3497,
+            src: 'static/img/Torso-comp.jpg',
+            thumbnail: 'static/img/Torso-comp.jpg',
+            w: 2352,
+            h: 2914,
           },
           {
             src: 'static/img/mask-comp.jpg',
             thumbnail: 'static/img/mask-comp.jpg',
             w: 2742,
             h: 3844,
+          },
+          {
+            src: 'static/img/Bleeding-Luna-comp.jpg',
+            thumbnail: 'static/img/Bleeding-Luna-comp.jpg',
+            w: 2378,
+            h: 3956,
           },
           ]" :options="{shareButtons:[
             {id:'facebook', label:'Share on Facebook', url:'https://www.facebook.com/sharer/sharer.php?u={{url}}'},
