@@ -10,52 +10,56 @@
       <v-layout justify-center>
         <v-flex md12 justify-center>
           <vue-picture-swipe :items="[{
-            src: 'static/img/deep-slumber-compressed.jpg',
-            thumbnail: 'static/img/deep-slumber-compressed.jpg',
-            w: 2723,
-            h: 3498,
+            src: 'static/img/deep-slumber-comp.jpg',
+            thumbnail: 'static/img/deep-slumber-comp.jpg',
+            w: 1749,
+            h: 1362,
             title: 'dsgdsg',
           },
           {
             src: 'static/img/drowning-for-eternity-comp.jpg',
             thumbnail: 'static/img/drowning-for-eternity-comp.jpg',
-            w: 2391,
-            h: 3403,
+            w: 1196,
+            h: 1702,
           },
           {
             src: 'static/img/long-lost-comp.jpg',
             thumbnail: 'static/img/long-lost-comp.jpg',
-            w: 1905,
-            h: 3676,
+            w: 953,
+            h: 1838,
           },
           {
             src: 'static/img/untitled-face-comp.jpg',
             thumbnail: 'static/img/untitled-face-comp.jpg',
-            w: 2868,
-            h: 3285,
+            w: 1434,
+            h: 1643,
           },
           {
             src: 'static/img/Torso-comp.jpg',
             thumbnail: 'static/img/Torso-comp.jpg',
-            w: 2352,
-            h: 2914,
+            w: 1176,
+            h: 1457,
           },
           {
             src: 'static/img/mask-comp.jpg',
             thumbnail: 'static/img/mask-comp.jpg',
-            w: 2742,
-            h: 3844,
+            w: 1361,
+            h: 1922,
           },
           {
             src: 'static/img/Bleeding-Luna-comp.jpg',
             thumbnail: 'static/img/Bleeding-Luna-comp.jpg',
-            w: 2378,
-            h: 3956,
+            w: 1189,
+            h: 1978,
+            pid: 'image-two',
           },
-          ]" :options="{shareButtons:[
-            {id:'facebook', label:'Share on Facebook', url:'https://www.facebook.com/sharer/sharer.php?u={{url}}'},
-            {id:'twitter', label:'Tweet', url:'https://twitter.com/intent/tweet?text={{text}}&url={{url}}'},
-            {id:'pinterest', label:'Pin it', url:'http://www.pinterest.com/pin/create/button/?url={{url}}&media={{image_url}}&description={{text}}'}]}">
+          ]"
+          :options="{shareButtons:[
+              {id:'facebook', label:'Share on Facebook', url:'https://www.facebook.com/sharer/sharer.php?u={{url}}'},
+              {id:'twitter', label:'Tweet', url:'https://twitter.com/intent/tweet?text={{text}}&url={{url}}'},
+              {id:'pinterest', label:'Pin it', url:'http://www.pinterest.com/pin/create/button/?url={{url}}&media={{image_url}}&description={{text}}'}
+            ]}"
+          >
           </vue-picture-swipe>
         </v-flex>
       </v-layout>
