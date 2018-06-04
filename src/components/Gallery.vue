@@ -9,58 +9,7 @@
       </v-layout>
       <v-layout justify-center>
         <v-flex md12 justify-center>
-          <vue-picture-swipe :items="[{
-            src: 'static/img/deep-slumber-comp.jpg',
-            thumbnail: 'static/img/deep-slumber-comp.jpg',
-            w: 1749,
-            h: 1362,
-            title: 'dsgdsg',
-          },
-          {
-            src: 'static/img/drowning-for-eternity-comp.jpg',
-            thumbnail: 'static/img/drowning-for-eternity-comp.jpg',
-            w: 1196,
-            h: 1702,
-          },
-          {
-            src: 'static/img/long-lost-comp.jpg',
-            thumbnail: 'static/img/long-lost-comp.jpg',
-            w: 953,
-            h: 1838,
-          },
-          {
-            src: 'static/img/untitled-face-comp.jpg',
-            thumbnail: 'static/img/untitled-face-comp.jpg',
-            w: 1434,
-            h: 1643,
-          },
-          {
-            src: 'static/img/Torso-comp.jpg',
-            thumbnail: 'static/img/Torso-comp.jpg',
-            w: 1176,
-            h: 1457,
-          },
-          {
-            src: 'static/img/mask-comp.jpg',
-            thumbnail: 'static/img/mask-comp.jpg',
-            w: 1361,
-            h: 1922,
-          },
-          {
-            src: 'static/img/Bleeding-Luna-comp.jpg',
-            thumbnail: 'static/img/Bleeding-Luna-comp.jpg',
-            w: 1189,
-            h: 1978,
-            pid: 'image-two',
-          },
-          ]"
-          :options="{shareButtons:[
-              {id:'facebook', label:'Share on Facebook', url:'https://www.facebook.com/sharer/sharer.php?u={{url}}'},
-              {id:'twitter', label:'Tweet', url:'https://twitter.com/intent/tweet?text={{text}}&url={{url}}'},
-              {id:'pinterest', label:'Pin it', url:'http://www.pinterest.com/pin/create/button/?url={{url}}&media={{image_url}}&description={{text}}'}
-            ]}"
-          >
-          </vue-picture-swipe>
+          <vue-preview :slides="slide1" @close="handleClose"></vue-preview>
         </v-flex>
       </v-layout>
     </div>
@@ -91,68 +40,92 @@ figure {
 }
 
 .my-gallery {
-  padding:10px 0 0 35px;
+  padding:10px 0 0 0;
+  align-items: center;
 }
  .my-gallery img {
    height: 350px;
-   margin-top:2px;
+   margin: 0 1px 0 1px;
    border: 1px solid rgb(60, 60, 60);
 }
 
 .my-gallery img:hover {
   filter: brightness(60%);
-
 }
 
 .my-gallery a {
   color: #fff;
+}
 
+.pswp__caption__center {
+  font-size: 14pt!important;
+  text-align: center!important;
 }
 
 </style>
 
 <script>
 
-// export default {
-//   data() {
-//     return {
-//       items: [{
-//         src: 'static/img/deep-slumber-compressed.jpg',
-//         thumbnail: 'static/img/deep-slumber-compressed.jpg',
-//         w: 2723,
-//         h: 3498,
-//       },
-//       {
-//         src: 'static/img/drowning-for-eternity-comp.jpg',
-//         thumbnail: 'static/img/drowning-for-eternity-comp.jpg',
-//         w: 2391,
-//         h: 3403,
-//       },
-//       {
-//         src: 'static/img/long-lost-comp.jpg',
-//         thumbnail: 'static/img/long-lost-comp.jpg',
-//         w: 1905,
-//         h: 3676,
-//       },
-//       {
-//         src: 'static/img/untitled-face-comp.jpg',
-//         thumbnail: 'static/img/untitled-face-comp.jpg',
-//         w: 2868,
-//         h: 3285,
-//       },
-//       {
-//         src: 'static/img/untitled-torso-comp.jpg',
-//         thumbnail: 'static/img/untitled-torso-comp.jpg',
-//         w: 2834,
-//         h: 3497,
-//       },
-//       {
-//         src: 'static/img/mask-comp.jpg',
-//         thumbnail: 'static/img/mask-comp.jpg',
-//         w: 2742,
-//         h: 3844,
-//       },
-//       ] };
-//   },
-// };
+export default {
+  data() {
+    return {
+      slide1: [{
+        src: 'static/img/deep-slumber-comp.jpg',
+        msrc: 'static/img/deep-slumber-comp.jpg',
+        w: 2723,
+        h: 3498,
+        title: 'Deep slumber - Oil on wood panel - 47x60cm - 2017',
+        alt: 'Deep slumber - Oil on wood panel',
+      },
+      {
+        src: 'static/img/Torso-comp.jpg',
+        msrc: 'static/img/Torso-comp.jpg',
+        w: 2834,
+        h: 3497,
+        title: 'Torso - Oil on canvas - 100x81cm',
+        alt: 'Torso - Oil on canvas',
+      },
+      {
+        src: 'static/img/mask-comp.jpg',
+        msrc: 'static/img/mask-comp.jpg',
+        w: 2742,
+        h: 3844,
+        title: 'Mask - Oil on canvas - 70x50cm',
+        alt: 'Mask - Oil on canvas',
+      },
+      {
+        src: 'static/img/untitled-face-comp.jpg',
+        msrc: 'static/img/untitled-face-comp.jpg',
+        w: 2868,
+        h: 3285,
+        title: 'Face - Oil on canvas - 73x60cm',
+        alt: 'Face - Oin on canvas',
+      },
+      {
+        src: 'static/img/drowning-for-eternity-comp.jpg',
+        msrc: 'static/img/drowning-for-eternity-comp.jpg',
+        w: 2391,
+        h: 3403,
+        title: 'Drowning for Eternity - Oil on canvas - 70x50cm',
+        alt: 'Drowning for Eternity - Oil on canvas',
+      },
+      {
+        src: 'static/img/long-lost-comp.jpg',
+        msrc: 'static/img/long-lost-comp.jpg',
+        w: 1905,
+        h: 3676,
+        title: 'Long-lost - Oil on canvas - 73x41cm',
+        alt: 'Long-lost - Oil on canvas',
+      },
+      {
+        src: 'static/img/Bleeding-Luna-comp.jpg',
+        msrc: 'static/img/Bleeding-Luna-comp.jpg',
+        w: 1189,
+        h: 1978,
+        title: 'Bleeding Luna - Oil on canvas',
+        alt: 'Bleeding Luna',
+      },
+      ] };
+  },
+};
 </script>

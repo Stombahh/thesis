@@ -16,7 +16,7 @@ import {
   VToolbar,
   transitions,
 } from 'vuetify';
-import VuePictureSwipe from 'vue-picture-swipe';
+import VuePreview from 'vue-preview';
 
 import App from './App';
 import router from './router';
@@ -50,7 +50,11 @@ Vue.use(Vuetify, {
   },
 });
 
-Vue.component('vue-picture-swipe', VuePictureSwipe);
+// Vue.component('vue-preview', VuePreview);
+Vue.use(VuePreview, {
+  barsSize: { top: 0, bottom: 0 },
+  // shareEl: false,
+});
 
 Vue.config.productionTip = false;
 
