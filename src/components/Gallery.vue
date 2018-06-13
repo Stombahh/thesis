@@ -27,7 +27,7 @@
     height:96%!important;
   }
   .my-gallery {
-    padding:10px 0 0 0!important;
+    padding:10px 0 0 10px!important;
   }
 }
 
@@ -40,11 +40,12 @@ figure {
 }
 
 .my-gallery {
-  padding:10px 0 0 0;
-  align-items: center;
+  padding:10px 0 0 0px;
 }
+
  .my-gallery img {
    height: 350px;
+   /* height: 25em; */
    margin: 0 1px 0 1px;
    border: 1px solid rgb(60, 60, 60);
 }
@@ -98,16 +99,16 @@ export default {
         msrc: 'static/img/untitled-face-comp.jpg',
         w: 2868,
         h: 3285,
-        title: 'Face - Oil on canvas - 73x60cm',
-        alt: 'Face - Oin on canvas',
+        title: 'Untitled face - Oil on canvas - 73x60cm',
+        alt: 'Untitled face - Oil on canvas',
       },
       {
         src: 'static/img/Torso-comp.jpg',
         msrc: 'static/img/Torso-comp.jpg',
         w: 2834,
         h: 3497,
-        title: 'Torso - Oil on canvas - 100x81cm',
-        alt: 'Torso - Oil on canvas',
+        title: 'Untitled torso - Oil on canvas - 100x81cm',
+        alt: 'Untitled torso - Oil on canvas',
       },
       {
         src: 'static/img/long-lost-comp.jpg',

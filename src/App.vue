@@ -88,7 +88,7 @@ html {
 
 @media only screen and (min-width: 1900px) {
   .layout-container {
-    width: 55% !important;
+    width: 56% !important;
   }
 }
 
