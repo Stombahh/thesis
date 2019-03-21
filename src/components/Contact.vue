@@ -1,5 +1,5 @@
 <template>
-<v-container fill-height>
+<v-container fill-height class="page">
   <v-layout class="layout-container">
     <div class="background">
       <v-layout>
@@ -10,7 +10,6 @@
       <v-layout row wrap>
       <v-flex md6 xs12 class="contact-leftside">
         <v-flex>
-          <p style="padding-right:10px;">Feel free to take contact if you want to order painting or ask something.</p>
           <v-flex><v-icon style="width:20px; margin-bottom:5px;">fas fa-map-marker-alt</v-icon><span>Sipoo, Finland</span></v-flex>
           <v-flex><v-icon style="width:20px; margin-bottom:5px;">fas fa-mobile-alt</v-icon><span>+358 50 4678 732</span></v-flex>
           <v-flex><v-icon style="width:20px; margin-bottom:5px;">fas fa-envelope</v-icon><span>kalle.pitkanen@hotmail.com</span></v-flex>
@@ -56,12 +55,11 @@
     </div>
   </v-layout>
 
-    <v-footer height="60" class="pa-3">
-        <v-btn href="https://www.instagram.com/infernumart/" flat icon><v-icon large>fab fa-instagram</v-icon></v-btn>
-        <v-btn href="https://www.facebook.com/kalle.pitkanen" flat icon><v-icon large>fab fa-facebook-square</v-icon></v-btn>
-        <v-spacer></v-spacer>
-        <div style="padding-right:15px;">&copy; {{ new Date().getFullYear() }} Kalle Pitkänen</div>
-    </v-footer>
+  <v-footer height="60" class="pa-3">
+      <v-btn href="https://www.instagram.com/kallepitkanen/" flat icon><v-icon large>fab fa-instagram</v-icon></v-btn>
+      <v-spacer></v-spacer>
+      <div style="padding-right:15px;">&copy; {{ new Date().getFullYear() }} Kalle Pitkänen</div>
+  </v-footer>
 </v-container>
 </template>
 
@@ -71,6 +69,12 @@
 @media only screen and (max-width: 600px) {
   .footer {
     width: 95% !important;
+  }
+
+  .page {
+    margin: 0 0 0 0;
+    padding: 0 0 40px 0;
+    /* position:inherit; */
   }
 }
 
@@ -103,9 +107,50 @@
   border-radius: 5px 5px 0 0;
 }
 
+.page {
+    position: fixed;
+    /* width: inherit; */
+    margin:-50px;
+  }
+
+  .router-anim-enter-active {
+  animation: coming 1s;
+  animation-delay: .5s;
+  opacity: 0;
+  }
+  .router-anim-leave-active {
+    animation: going 1s;
+  }
+
+  @keyframes going {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+  }
+  @keyframes coming {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* html {
+    overflow-y: auto;
+  } */
+
 </style>
 
 <script>
+
+// import '../node_modules/slick-carousel/slick/slick.css';
 import axios from 'axios';
 
 export default {

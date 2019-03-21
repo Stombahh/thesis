@@ -43,7 +43,9 @@
 
   <!-- start: content -->
   <v-content>
-    <router-view/>
+    <transition name="router-anim" enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutDown">
+       <router-view/>
+    </transition>
   </v-content>
   <!-- end: content -->
 
@@ -51,10 +53,60 @@
 </template>
 
 <style>
+/* @import '../node_modules/slick-carousel/slick/slick.css'; */
+ 
+/* @import '/node_modules/vue2-scrollbar/style/vue2-scrollbar.css'; */
 
-html {
-  overflow-y: auto;
-}
+@import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
+
+  /* body {
+    background: rgb(233, 233, 233);
+    font-family:Arial, Helvetica, sans-serif;
+  } */
+  html, body {
+    /* height: calc(100% - 50px); */
+  }
+
+  #app {
+    /* background: #fff; */
+    /* margin: 50px auto 0 auto; 
+    height: calc(60% - 50px);  */
+  }
+
+  .page {
+    position: fixed;
+    /* width: inherit; */
+    margin:-50px;
+  }
+
+  .router-anim-enter-active {
+  animation: coming 1s;
+  animation-delay: .5s;
+  opacity: 0;
+  }
+  .router-anim-leave-active {
+    animation: going 1s;
+  }
+
+  @keyframes going {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+  }
+  @keyframes coming {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 
 .content {
   background-image: url(/static/img/bg-image3.jpg);
@@ -76,6 +128,10 @@ html {
 
   .background {
     padding: 1em!important;
+  }
+
+  .page {
+    margin: -50px 0 0 0;
   }
   .profile-image {
     margin:0 !important;

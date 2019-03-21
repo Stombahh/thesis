@@ -1,5 +1,5 @@
 <template>
-<v-container fill-height>
+<v-container fill-height class="page">
   <v-layout class="layout-container">
     <div class="background">
       <v-layout>
@@ -19,6 +19,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style scoped>
+
 .background {
   width: auto;
 }
