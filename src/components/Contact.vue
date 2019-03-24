@@ -10,7 +10,7 @@
       <v-layout row wrap>
       <v-flex md6 xs12 class="contact-leftside">
         <v-flex>
-          <v-flex><v-icon style="width:20px; margin-bottom:5px;">fas fa-map-marker-alt</v-icon><span>Sipoo, Finland</span></v-flex>
+          <v-flex><v-icon style="width:20px; margin-bottom:5px;">fas fa-map-marker-alt</v-icon><span>Turku, Finland</span></v-flex>
           <v-flex><v-icon style="width:20px; margin-bottom:5px;">fas fa-mobile-alt</v-icon><span>+358 50 4678 732</span></v-flex>
           <v-flex><v-icon style="width:20px; margin-bottom:5px;">fas fa-envelope</v-icon><span>kalle.pitkanen@hotmail.com</span></v-flex>
         </v-flex>
@@ -55,32 +55,39 @@
     </div>
   </v-layout>
 
-  <v-footer height="60" class="pa-3">
+  <!-- <v-footer height="60" class="pa-3">
       <v-btn href="https://www.instagram.com/kallepitkanen/" flat icon><v-icon large>fab fa-instagram</v-icon></v-btn>
       <v-spacer></v-spacer>
       <div style="padding-right:15px;">&copy; {{ new Date().getFullYear() }} Kalle Pitkänen</div>
-  </v-footer>
+  </v-footer> -->
 </v-container>
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
+
 
 @media only screen and (max-width: 600px) {
   .footer {
     width: 95% !important;
+    margin: 0 2% !important;
   }
 
   .page {
     margin: 0 0 0 0;
     padding: 0 0 40px 0;
-    /* position:inherit; */
   }
+/* 
+    .layout-container {
+    margin-top: 20vh !important;
+    width: 95% !important;
+  } */
 }
 
 @media only screen and (min-width: 1900px) {
   .footer {
-    width: 55% !important;
+    margin: 0 22% !important;
+    width: 56% !important;
   }
 }
 
@@ -103,48 +110,15 @@
 }
 
 .footer {
-  width: 70%;
   border-radius: 5px 5px 0 0;
+  margin: 0 15%;
+  width: 70%;
 }
 
-.page {
-    position: fixed;
-    /* width: inherit; */
-    margin:-50px;
-  }
+.application.theme--dark {
+  background: rgba(0,0,0,0);
+}
 
-  .router-anim-enter-active {
-  animation: coming 1s;
-  animation-delay: .5s;
-  opacity: 0;
-  }
-  .router-anim-leave-active {
-    animation: going 1s;
-  }
-
-  @keyframes going {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50px);
-      opacity: 0;
-    }
-  }
-  @keyframes coming {
-    from {
-      transform: translateX(-50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  /* html {
-    overflow-y: auto;
-  } */
 
 </style>
 

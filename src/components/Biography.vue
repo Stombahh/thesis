@@ -29,16 +29,19 @@
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 @media only screen and (max-width: 600px) {
-  .footer {
-    width: 95% !important;
-  }
 
-  /* .page {
-    margin: 0 0 0 0;
-    position: fixed;
+      /* .layout-container {
+    margin-top: 20vh !important;
+    width: 95% !important;
   } */
+
+  .page {
+    /* margin: 0 0 0 0;
+    position: fixed; */
+    overflow:scroll;
+  }
 }
 
 .profile-image {

@@ -1,7 +1,7 @@
 <template>
 <v-container fill-height class="page">
   <v-layout class="layout-container">
-    <div class="background" style="max-height:85%;">
+    <div class="background gallery" style="max-height:80%;">
        <v-layout>
         <v-flex md12>
           <h2>Gallery</h2>
@@ -9,12 +9,7 @@
       </v-layout>
       <v-layout justify-center>
         <v-flex md12 justify-center>
-          <!-- <slick ref="Slick"
-            :options="slickOptions">
-            <vue-preview :slides="slide1" @close="handleClose"></vue-preview>
-            <vue-preview :slides="slide2" @close="handleClose"></vue-preview>
-          </slick> -->
-          <vue-scrollbar classes="my-scrollbar" ref="Scrollbar">
+          <vue-scrollbar classes="my-scrollbar" ref="Scrollbar" style="overflow:hidden;">
             <div class="scroll-me">
           <vue-preview :slides="slide1" @close="handleClose"></vue-preview>         
             </div>
@@ -38,6 +33,19 @@
   .my-gallery {
     padding:10px 0 0 10px!important;
   }
+
+    .layout-container {
+    /* margin-top: 20vh !important; */
+    width: 95% !important;
+  }
+
+  .testi {
+    height: 0 !important;
+  }
+
+  /* .background gallery {
+    height: 100% !important;
+  } */
 }
 
 figure {
@@ -45,6 +53,7 @@ figure {
 }
 
 .background {
+  overflow:hidden;
   width: 100%;
 }
 
@@ -53,7 +62,7 @@ figure {
 }
 
  .my-gallery img {
-   height: 350px;
+   height: 350px !important;
    /* height: 25em; */
    margin: 0 1px 0 1px;
    border: 1px solid rgb(60, 60, 60);
@@ -67,10 +76,6 @@ figure {
   color: #fff;
 }
 
-html {
-  overflow: hidden;
-}
-
 .pswp__caption__center {
   font-size: 14pt!important;
   text-align: center!important;
@@ -79,7 +84,11 @@ html {
 .page {
     position: fixed;
     /* width: inherit; */
-    margin:-50px;
+    /* margin:-50px 0; */
+  }
+
+  html {
+    overflow:  hidden !important;
   }
 
   .router-anim-enter-active {

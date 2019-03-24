@@ -49,11 +49,16 @@
   </v-content>
   <!-- end: content -->
 
+  <v-footer height="60" style="bottom: 0; position: fixed;" v-if="['contact'].includes($route.name)" >
+    <v-btn href="https://www.instagram.com/kallepitkanen/" flat icon><v-icon large>fab fa-instagram</v-icon></v-btn>
+    <v-spacer></v-spacer>
+    <div style="padding-right:15px;">&copy; {{ new Date().getFullYear() }} Kalle Pitkänen</div>
+  </v-footer>
+
 </v-app>
 </template>
 
 <style>
-/* @import '../node_modules/slick-carousel/slick/slick.css'; */
  
 /* @import '/node_modules/vue2-scrollbar/style/vue2-scrollbar.css'; */
 
@@ -68,15 +73,8 @@
   }
 
   #app {
-    /* background: #fff; */
     /* margin: 50px auto 0 auto; 
     height: calc(60% - 50px);  */
-  }
-
-  .page {
-    position: fixed;
-    /* width: inherit; */
-    margin:-50px;
   }
 
   .router-anim-enter-active {
@@ -118,12 +116,21 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   font-family: 'EB Garamond', serif;
+  margin-top: 56px;
 }
+
+/* .content--wrap {
+  margin-top: 20px;
+} */
 
 @media only screen and (max-width: 600px) {
   .layout-container {
-    /* margin-top: 20vh !important; */
+    /* margin-top: 20% !important; */
     width: 95% !important;
+    line-height: 1.2;
+
+    justify-content: center !important;
+    align-items: flex-start !important; 
   }
 
   .background {
@@ -131,7 +138,8 @@
   }
 
   .page {
-    margin: -50px 0 0 0;
+    /* margin: -50px 0 0 0; */
+    /* position:fixed; */
   }
   .profile-image {
     margin:0 !important;
@@ -147,6 +155,18 @@
     width: 56% !important;
   }
 }
+
+.page {
+  position: fixed;
+}
+
+html {
+  overflow: hidden !important;
+}
+
+/* .layout {
+  height:0;
+} */
 
 .container {
   padding: 0;
@@ -167,7 +187,7 @@
   background: rgba(33, 33, 33, 0.90);
   border-radius: 5px;
   padding: 2rem;
-  margin: 10px 0 10px 0;
+  /* margin: 10px 0 10px 0; */
 }
 
 .content-padding {
