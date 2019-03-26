@@ -116,7 +116,6 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   font-family: 'EB Garamond', serif;
-  margin-top: 56px;
 }
 
 /* .content--wrap {
@@ -131,6 +130,10 @@
 
     justify-content: center !important;
     align-items: flex-start !important; 
+  }
+
+  .content {
+    margin-top: 20px;
   }
 
   .background {

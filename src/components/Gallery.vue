@@ -1,13 +1,14 @@
 <template>
 <v-container fill-height class="page">
   <v-layout class="layout-container">
-    <div class="background gallery" style="max-height:80%;">
+    <div class="background gallery" style="height: 85vh; padding: 2rem 0.5rem 2rem 2rem">
        <v-layout>
         <v-flex md12>
           <h2>Gallery</h2>
         </v-flex>
       </v-layout>
-      <v-layout justify-center>
+      <!-- <div style="max-height:90%; margin-top: -65%; overflow-y: scroll;"> -->
+      <v-layout justify-center style="height: unset!important;">
         <v-flex md12 justify-center>
           <vue-scrollbar classes="my-scrollbar" ref="Scrollbar" style="overflow:hidden;">
             <div class="scroll-me">
@@ -16,6 +17,7 @@
           </vue-scrollbar>
         </v-flex>
       </v-layout>
+      <!-- </div> -->
     </div>
   </v-layout>
 </v-container>
@@ -39,13 +41,13 @@
     width: 95% !important;
   }
 
-  .testi {
-    height: 0 !important;
-  }
+.my-scrollbar{
+  height: 40em !important;
+}
+}
 
-  /* .background gallery {
-    height: 100% !important;
-  } */
+.container.fill-height .layout {
+  height:unset!important;
 }
 
 figure {
@@ -120,15 +122,13 @@ figure {
     }
   }
 
-/*The Wrapper*/
 .my-scrollbar{
   width: 100%;
   min-width: 300px;
-  max-height: 42vw;
+  height: 50em;
   background: rgba(33, 33, 33, 0.00) !important;
 }
 
-/*The Content*/
 .scroll-me{
   min-width: 100px;
 }

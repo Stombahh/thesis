@@ -32,15 +32,8 @@
 <style>
 @media only screen and (max-width: 600px) {
 
-      /* .layout-container {
-    margin-top: 20vh !important;
-    width: 95% !important;
-  } */
-
-  .page {
-    /* margin: 0 0 0 0;
-    position: fixed; */
-    overflow:scroll;
+  .layout-container {
+    overflow: scroll!important;
   }
 }
 
@@ -54,10 +47,6 @@
   max-width: 100%;
   max-height: 400px;
   border-radius: 5px;
-}
-
-.background {
-  /* width: 90%; */
 }
 
 </style>
