@@ -12,7 +12,7 @@
         <v-flex md12 justify-center>
           <vue-scrollbar classes="my-scrollbar" ref="Scrollbar" style="overflow:hidden;">
             <div class="scroll-me">
-          <vue-preview :slides="slide1" @close="handleClose"></vue-preview>         
+          <vue-preview :slides="slide1" @close="handleClose"></vue-preview>
             </div>
           </vue-scrollbar>
         </v-flex>
@@ -220,6 +220,38 @@ export default {
           h: 1827,
           title: 'Eclipsim - Oil on canvas - 76 x 60cm - 2018',
           alt: 'Eclipsim - Oil on canvas',
+        },
+        {
+          src: 'static/img/Sielunpalo.jpg',
+          msrc: 'static/img/Sielunpalo.jpg',
+          w: 1080,
+          h: 902,
+          title: 'Soul aflame - Oil on canvas - 100 x 120 cm - 2019',
+          alt: 'Soul aflame - Oil on canvas',
+        },
+        {
+          src: 'static/img/Sisters.jpg',
+          msrc: 'static/img/Sisters.jpg',
+          w: 1150,
+          h: 840,
+          title: 'Sisters - Oil on canvas - 68 x 86 cm - 2019',
+          alt: 'Sisters - Oil on canvas',
+        },
+        {
+          src: 'static/img/Torso.jpg',
+          msrc: 'static/img/Torso.jpg',
+          w: 1080,
+          h: 1481,
+          title: 'Torso - Egg tempera and oil on canvas - 42 x 30 cm - 2019',
+          alt: 'Torso - Egg tempera and oil on canvas',
+        },
+        {
+          src: 'static/img/The Fall.jpg',
+          msrc: 'static/img/The Fall.jpg',
+          w: 1080,
+          h: 1317,
+          title: 'The Fall - Oil on canvas - 68 x 86 cm - 2019',
+          alt: 'The Fall - Oil on canvas',
         },
         {
           src: 'static/img/old-man-and-the-moon-comp.jpg',
