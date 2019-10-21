@@ -12,6 +12,7 @@
         </v-layout>
       </div>
     </v-layout>
+    <!--  test -->
 
     <!-- <v-icon x-large>fas fa-chevron-down</v-icon> -->
   </v-container>
@@ -31,7 +32,7 @@
     line-height: 1.2;
 
     justify-content: center !important;
-    align-items:center !important; 
+    align-items:center !important;
   }
 
   content {
